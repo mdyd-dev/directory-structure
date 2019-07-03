@@ -1,0 +1,9 @@
+---
+slug: /
+layout_name: 1col
+metadata:
+  pagetitle: Home
+---
+{%- content_for 'pagetitle' -%}{{ context.page.metadata.pagetitle }}{%- endcontent_for -%}
+
+<h1>{{ context.page.metadata.pagetitle }}</h1>
