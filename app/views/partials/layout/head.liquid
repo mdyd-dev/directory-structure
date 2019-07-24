@@ -3,10 +3,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta content="{{ form_authenticity_token }}" name="csrf-token">
 <meta content="authenticity_token" name="csrf-param">
-<meta name="description" content="{{ context.exports.meta.desc }}">
-
+<meta name="description" content="{{ context.page.metadata.desc }}">
 <link rel="shortcut icon" href="{{ 'images/favicon.ico' | asset_url }}">
 <link rel="stylesheet" media="screen" href="{{ 'styles/vendor.css' | asset_url }}">
 <link rel="stylesheet" media="screen" href="{{ 'styles/app.css' | asset_url }}">
 
-<title>{{ context.exports.meta.pagetitle }}</title>
+<title>{{ context.page.metadata.pagetitle }}</title>
