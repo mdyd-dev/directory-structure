@@ -1,20 +1,12 @@
-query get_listings($per_page: Int = 20, $page: Int = 1, $query: String) {
-  listings(
+query get_model($per_page: Int = 20, $page: Int = 1, $query: String) {
+  models(
     per_page: $per_page
     page: $page
-    query: { keyword: $query }
-    listing: { is_deleted: false, has_creator: true }
+    filter: { deleted_at: { exists: false } }
   ) {
     total_entries
-
     results {
-      slug
-      name
+      id
     }
-  }
-
-  current_user {
-    id
-    email
   }
 }
