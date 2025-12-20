@@ -1,0 +1,25 @@
+{
+  "scripts": {
+    "build": "npx cross-env NODE_ENV=production webpack-cli",
+    "build:dev": "npx cross-env NODE_ENV=development webpack-cli",
+    "clean:assets": "npx rimraf app/assets/{js,css}/*",
+    "tests": "npx playwright test",
+    "eslint": "eslint src/js --ext .js"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.47.2",
+    "rimraf": "^3.0.2",
+    "tailwindcss": "^2.2.16",
+    "tailwindcss-rtl": "^0.7.3"
+  },
+  "optionalDependencies": {
+    "fsevents": "^2.3.2"
+  },
+  "browserslist": "> 1% or last 2 years",
+  "name": "application name",
+  "version": "1.0.0",
+  "description": "application description",
+  "author": "platformOS",
+  "license": "ISC",
+  "repository": ""
+}
