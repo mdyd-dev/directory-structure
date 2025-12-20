@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta content="authenticity_token" name="csrf-param">
-    <meta content="{{ form_authenticity_token }}" name="csrf-token">
+    <meta content="{{ context.authenticity_token }}" name="csrf-token">
 
     <title>Hello world! | platformOS</title>
 
@@ -16,7 +16,7 @@
     {{ content_for_layout }}
 
 
-    <script src="{{ 'scripts/app.js' | asset_url }}"></script>
+    <script async src="{{ 'scripts/app.js' | asset_url }}"></script>
 
   </body>
 </html>
